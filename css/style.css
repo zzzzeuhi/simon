@@ -1,6 +1,23 @@
 @charset "utf-8";
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+.readable-hidden{
+	position: absolute;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	margin: -1px;
+	clip: rect(0,0,0,0);
+	visibility: hidden;
+}
+.clearfix::after{
+	content:"";
+	display: block;
+	clear: both;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,9 +71,94 @@ body{
   font-weight: 400;
   line-height: 1.15;
   color: #000000;
-  background-color: #eaedef;
+  background-color: #e9edef;
   font-size: 2rem;
   /* background-image: linear-gradient(-45deg,red,green); */
 
 
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 헤더 */
+.header{
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 80px 0;
+
+}
+
+/* 메인메뉴 */
+
+.menu{
+	display: flex;
+}
+.menu li{
+	font-size: 2.5rem;
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-left: 1em;
+	letter-spacing: -1px;
+}
+.menu .is-act{
+	border-bottom: 2px solid black;
+}
+/* 포트폴리오 섹션 */
+.product{
+	background-color: #fff;
+	border: 1px solid #e9edef;
+	padding: 50px;
+	margin: 40px;
+	display: flex;
+	border-radius: 10px;
+	align-items: center;
+	
+}
+/* 플로트를 활용한 레이아웃 */
+/* .product .wrapper{
+	float: left; */
+
+/* flex를 활용한 레이아웃 */
+.thumbnail{
+	margin: 50px;
+
+}
+.product .subject{
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 3.5rem;
+
+}
+.product .summary{
+	margin: 1em 0;
+}
+.product .more{
+	color: #B41917;
+	font-size: 1.5rem;
+}
+/* 푸터 */
+.footer{
+	font-size: 1.5rem;
+	margin: 150px 0 50px;
+	display: flex;
+
+}
+
+.sns{
+	display: flex;
+}
+.sns li::before{
+
+	content: '·';
+	margin: 0 5px;
+	
+}
+.copyright{
+	margin-left: auto;
 }
