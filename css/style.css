@@ -125,7 +125,7 @@ img{
 /* .product .wrapper{
 	float: left; */
 /* flex를 활용한 레이아웃 */
-.thumbnail{
+.product .thumbnail{
 	margin: 50px;
 }
 .product .subject{
@@ -181,7 +181,7 @@ img{
 	font-weight: 700;
 	padding: 1em 0;
 	text-transform: uppercase;
-	text-align: center;
+
 }
 
 .portfolio .small{
@@ -190,12 +190,9 @@ img{
 }
 .portfolio .medium{
 	font-size: 4rem;
-	text-align: left;
-}
-.portfolio .group{
-	text-align: left;
 
 }
+
 .portfolio .wrapper{
 	width: 750px;
 	margin: 0 auto;
@@ -209,7 +206,6 @@ img{
 .portfolio .thumbnail{
 	width: 100%;
 	font-size: 1.5rem;
-	text-align: center;
 }
 .portfolio .list, .portfolio ol{
 	font-size: 3rem;
